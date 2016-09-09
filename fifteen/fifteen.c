@@ -13,6 +13,8 @@
  *
  * Note that usleep is obsolete, but it offers more granularity than
  * sleep and is simpler to use than nanosleep; `man usleep` for more.
+ * 
+ * By- Abhishek Tiwari
  */
  
 #define _XOPEN_SOURCE 500
@@ -194,18 +196,7 @@ void draw(void)
 bool move(int tile)
 {
     // TODO
-   // int pos;  || tile == board[d-2][d-1
-/*   int i = d-1;
-   int j = d-1;
-    if(tile == board[d-1][d-2])
-    {
-         int temp;
-         temp = board[d-1][d-2];
-         board[d-1][d-2] = board[d-1][d-1];
-         board[d-1][d-1] = temp;  
-         return true; 
-    }
-    */
+   
     int l,m;
      
     
@@ -240,12 +231,7 @@ bool move(int tile)
          x = z;
          return true;
       }
-
       
-      
-     
-    
-    
     return false;
 }
 
@@ -264,14 +250,6 @@ bool won(void)
     {
       for(int j=0; j<d-1; j++)
       {
-        //  a[k] = board[i][j];  
-          //k++; 
-           
-         //  if((board[i][j]>board[i+1][j]) || (board[i][j]>board[i][j+1]) || board[2][2]!=95)
-          
-          
-          
-          
              while(board[i][j]!= k ) 
              {
                 if(k==9)
@@ -284,22 +262,7 @@ bool won(void)
          
     }
    
- /*   for(int i=0;i<n-2;i++)
-    {
-     if(a[i]>a[i+1])
-       continue;
-       
-       else
-       return false;
-      
-     
-    } */
-    
-    
-    
-    
-    
-    
+ 
     return true;
 }
 
